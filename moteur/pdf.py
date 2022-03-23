@@ -52,6 +52,7 @@ class Pdf(Fic):
             # Tableau
             elif self.dtfElements["type"][i] == "TBL":
                 #tElements.append(Table((self.dtfElements["data"][i])))
+                print(">>> TYPE TABLE = %s" % type(self.dtfElements["data"][i]))
                 data = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
                 t = Table(data, len(data) * [2 * cm], len(data[0]) * [1 * cm])
                 t.setStyle(TableStyle([('FONTSIZE', (0, 0), (-1, -1), 12),
